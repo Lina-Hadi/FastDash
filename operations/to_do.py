@@ -110,17 +110,3 @@ def delete_todo(_id: int):
             'message': str(e)
         }
     
-#res = create_to_do("Develop crypto project")
-#print(res)
-
-#res = get_all()
-#print(res)
-
-#res = get_one(2)
-#print(res)
-
-# res = update_todo(3, "Call GoMyCode")
-# print(res)
-
-res = delete_todo(5)
-print(res)
