@@ -1,11 +1,16 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from models.sql_model import BASE
+from dotenv import load_dotenv
+import os
 
-db_user: str = 'postgres'
-db_port: int = 5432
-db_host: str = 'localhost'
-db_password: str = 'youri2003'
+load_dotenv()
+
+db_user = os.getenv("DB_USER")
+db_host = os.getenv("DB_HOST")
+db_port = os.getenv("DB_PORT")
+db_password = os.getenv("DB_PASSWORD")
+
 
 uri: str = F'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/to-do-app'
 
