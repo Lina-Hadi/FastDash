@@ -6,13 +6,13 @@ import os
 
 load_dotenv()
 
-db_user = os.getenv("DB_USER")
-db_host = os.getenv("DB_HOST")
-db_port = os.getenv("DB_PORT")
-db_password = os.getenv("DB_PASSWORD")
+DB_USER = os.getenv("DB_USER")
+DB_HOST = os.getenv("DB_HOST")
+DB_PORT = os.getenv("DB_PORT")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
 
 
-uri: str = F'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/to-do-app'
+uri: str = F'postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/to-do-app'
 
 engine = create_engine(uri)
 
